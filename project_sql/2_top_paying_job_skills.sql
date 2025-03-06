@@ -6,26 +6,37 @@
 - Why? It provides a detailed look at which high-paying jobs demand certain skills, helping job seekers understand which skills to develop that align with top salaries
 */
 
---Top 100 highest paying analyst roles in Canada. (the data needs more input to have a better understanding of the job market)
+-- Gets the top 10 paying Data Analyst jobs 
+WITH top_paying_jobs AS (
+    SELECT
+        job_id,
+        job_title,
+        salary_year_avg,
+        salary_hour_avg
+        -- name AS company_name
+    FROM
+        job_postings_fact
+    -- LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
+    WHERE
+        --job_title_short = 'Analyst'
+		salary_hour_avg IS NOT NULL
+        AND job_country = 'Canada'
+    ORDER BY
+        salary_hour_avg DESC
+    --LIMIT 100
+)
+-- Skills required for data analyst jobs
 SELECT
-    job_id,
+    top_paying_jobs.job_id,
     job_title,
-    name AS company_name,
-    job_country,
-    job_location,
-    job_schedule_type,
     salary_year_avg,
     salary_hour_avg,
-    salary_hour_avg * 2080 AS estimated_salary_year_avg, -- Assuming 2080 working hours in a year
-    salary_rate,
-    job_posted_date
+    skills
 FROM
-    job_postings_fact
-   LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
-WHERE
-    job_title LIKE '%Analyst%'
-    AND salary_hour_avg IS NOT NULL
-    AND job_country = 'Canada'
+    top_paying_jobs
+	INNER JOIN
+    skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
+	INNER JOIN
+    skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
-    salary_hour_avg DESC
-LIMIT 100;
+    salary_year_avg DESC
