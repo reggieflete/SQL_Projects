@@ -43,9 +43,7 @@ In this project, I used the following tools to conduct my analysis:
 
 ## 📊 **Analysis**  
 
-Each query in this project aimed at investigating specific aspects of the **data analyst job market**. Here’s how I approached each question:  
-
----
+Each query in this project aimed at investigating specific aspects of the **data analyst job market**
 
 ### 💰 **1. Top-Paying Data Analyst Jobs**  
 
