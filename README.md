@@ -72,7 +72,7 @@ The most frequently requested skills were:
 * **Tableau** & **Power BI** – 5 each
 * **Python** – 4
 
-![Most Demanded Skills](most_demanded_skills.png)
+![Most Demanded Skills](charts/most_demanded_skills.png)
 
 ### 💵 4. Skills Based on Salary
 
@@ -83,7 +83,7 @@ The top-paying skills (based on hourly rates) include:
 * **SAP** – \$64/hour
 * **Azure** – \$56/hour
 
-![Top Paying Skills](top_paying_skills.png)
+![Top Paying Skills](charts/top_paying_skills.png)
 
 ### 🏆 5. Most Optimal Skills to Learn
 
@@ -93,7 +93,7 @@ This combines demand and salary insights. The most optimal skills are:
 * **Python** – 236 postings, \$101,397 avg salary
 * **Tableau** – 230 postings, \$99,287 avg salary
 
-![Optimal Skills](optimal_skills.png)
+![Optimal Skills](charts/optimal_skills.png)
 
 ---
 
