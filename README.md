@@ -50,6 +50,8 @@ The dataset comes from Luke Barousse’s SQL course and contains details on:
 
 📊 **Analysis**
 
+*It was noticed that the dataset didn't provide much Canada data, I proceeded with the analysis just for educational purposes*
+
 ### 💰 1. Top-Paying Data Analyst Jobs
 
 Filtered positions by highest average salary, focusing on remote jobs. These roles offer salaries up to **\$650,000/year**, showcasing the top tier of the job market.
